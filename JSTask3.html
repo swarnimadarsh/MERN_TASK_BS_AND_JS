@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTask3</title>
+    <style>
+        td{
+            padding-right: 1rem;
+            padding-top: 1rem;
+            
+        }
+        .c1{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div  style="border:1px solid black; width: fit-content;">
+            <table>
+                <tr>
+                    <td>
+                        <label for="" class="form-label" ><b>1nd Number:</b></label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="i1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="" class="form-label" ><b>2nd Number:</b></label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="i2">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 5px;" >
+                        <button class="btn " id="i3" onclick="mul()" >multiply</button>
+                        <button class="btn" id="i4" onclick="div()">Divide</button>
+                    </td>
+                </tr>
+                <tr>
+                   <td> The Result is:</td>
+                </tr>
+                <tr>
+                    <td><p id="i5" style="margin: 0px;"><p></p></td>
+                </tr>
+            </table>
+           
+        </div>
+    </center>
+
+    <script>
+        function mul(){
+           let a=document.getElementById("i1").value;
+           let b=document.getElementById("i2").value;
+           let c=a*b;
+           document.getElementById("i5").innerHTML= c;
+        }
+        function div(){
+            let a=document.getElementById("i1").value;
+           let b=document.getElementById("i2").value;
+           let c=a/b;
+           document.getElementById("i5").innerHTML=c;
+        }
+    </script>
+</body>
+</html>

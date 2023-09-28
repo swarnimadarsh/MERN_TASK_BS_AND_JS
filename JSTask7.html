@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTask7</title>
+    <style>
+        #image {
+            position: relative;
+            animation-name: moveimage;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .header1{
+            color: rgb(47, 47, 190);
+            text-align: center;
+        }
+        #buttons{
+            text-align: center ;
+            margin: 10px;
+        }
+        @keyframes moveimage {
+            from{
+                transform: translateX(0%);
+
+            }
+            to{
+                transform: translateX(150%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div >
+        <img src="train.jpg" alt="" id="image">
+        <h1 class="header1">click the following button to handle animation</h1>
+        <div id="buttons">
+            <button id="startButton" style="margin-right: 10px;" onclick="startAnimation()">Start </button>
+            <button id="stopButton" onclick="stopAnimation()">Stop </button>
+        </div>
+    </div>
+    <script>
+        const image = document.getElementById('image');
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+
+        
+
+        function startAnimation() {
+            image.style.animationPlayState = 'running';
+        }
+
+        function stopAnimation() {
+            image.style.animationPlayState = 'paused';
+        }
+    </script>
+</body>
+</html>

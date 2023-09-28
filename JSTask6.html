@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTask6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin-top: 10px;
+            
+            font-family: Arial, sans-serif;
+        }
+        .card{
+            background-color: rgb(244, 244, 244);
+        }
+        
+        .d1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            
+        }
+        .d2{
+            display: flex;
+            padding-left: 5rem;
+            align-items: center;
+            margin-top: 10px;
+
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <div class="row">
+            <div class="col-4"></div>
+            <form class="form"  >
+                <div class="card col-md-4">
+                    <p class="display-6 pt-4" ><i>Instagram</i></p>
+                    <div class="p-2  input-group">
+                        <span class="input-group-text"><i class="fas fa-user "></i></span>
+                        <input type="text" class="form-control" placeholder="Username"aria-label="Username" aria-describedby="basic-addon1" id="inp1">
+                        
+                    </div>
+                    <p id="i1"></p>
+                    <div class="p-2  input-group">
+                        <span class="input-group-text"><i class="fas  fa-lock"></i></span>
+                        <input type="password" class="form-control" placeholder="Password"aria-label="Username" aria-describedby="basic-addon1" id="inp2">
+                        
+                    </div>
+                    <p id="i2"></p>
+                    <div class="p-2" >
+                        <button class="btn btn-primary "  style="width: 100%;" onclick="validate(event)"  > Login</button>
+                    </div>
+                    <div class="p-2 d1 pb-4" >
+                        <span ><input type="checkbox" name="" id="">Remember me</span>
+                        <a href="#">Forgot passowrd?</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+           <div class="col-4"></div>
+           <div class="col-3 d2"> 
+            <span>Don't have an account? </span>
+             <a href="#">Sign up here</a>
+        </div>
+        </div>
+
+    </center>
+    <script>
+        function validate(event){
+            event.preventDefault();
+            var username=document.getElementById("inp1").value;
+            var password=document.getElementById("inp2").value;
+            document.getElementById("i1").innerHTML='';
+            document.getElementById("i2").innerHTML='';
+            if(username=="" ){
+                document.getElementById("i1").innerHTML='<span class=" text-danger ms-2  text-center">Please enter a username</span>';
+                document.getElementById("i1").style.color="red";
+                
+            }
+            if( password==""){
+                document.getElementById("i2").innerHTML='<span class=" text-danger ms-2  text-center">Please enter a password</span>';
+                document.getElementById("i2").style.color='red';
+            }
+           
+        }
+
+
+    </script>
+</body>
+</html>

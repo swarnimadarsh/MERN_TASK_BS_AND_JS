@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTask8</title>
+    <style>
+        
+        table{
+            border: none;
+        }
+        table, tr, td {
+            border-collapse: collapse;
+            padding: 3px;
+        }
+        .c1{
+            width: 400px;
+        }
+        .reg{
+            color: rgb(15, 44, 85);
+            margin-left: 11rem;
+        }
+        .b1{
+            margin-left: 14rem;
+            margin-top: 4px;
+        }
+        .d1{
+            display: relative;
+            margin-left: 20%;
+            background-color: rgb(216, 187, 204);
+            margin-right: 20%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="d1">
+            <table class="t1"  >
+                <h2 class="reg">Registration Form</h2>
+                <tr>
+                    <th>First Name:</th>
+                    <td><input class="c1" type="text" name="" id="firstname" onkeyup="v1()" > </td>
+                    <td ><span id="i1"></span></td>
+                </tr>
+                <tr>
+                    <th>Last Name:</th>
+                    <td><input class="c1" type="text" name="" id="lastname" onkeyup="v2()"></td>
+                    <td id="i2"></td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td><input class="c1" type="email" name="" id="email" onkeyup="v3()"> </td>
+                    <td id="i3"></td>
+                </tr>
+                <tr>
+                    <th>Password:</th>
+                    <td><input class="c1" type="password" id="password" onkeyup="v4()"> </td>
+                    <td id="i4"></td>
+                </tr>
+                <tr>
+                    <th>Re-enter Password</th>
+                    <td><input class="c1" type="password" name="" id="repassword" onkeyup="v5()"></td>
+                    <td id="i5"></td>
+                </tr>
+                <tr>
+                    <th>Gender:</th>
+                    <td>
+                        <input type="radio" name="gen" id="">Male
+                        <hr>
+                        <input type="radio" name="gen" id="">Female
+                    </td>
+                </tr>
+                <tr>
+                    <th>Age:</th>
+                    <td><input class="c1" type="number" name="" id="age" onkeyup="v6()"></td>
+                    <td id="i6"></td>
+                </tr>
+                <tr>
+                    <th>Phone Number</th>
+                    <td><input class="c1" type="tel" name="" id="phone" onkeyup="v7()"></td>
+                    <td id="i7"></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td><textarea class="c1" name="" id="address" cols="30" rows="10" onkeyup="v8()"></textarea></td>
+                    <td id="i8"></td>
+                </tr>
+                <tr>
+                    <th>State</th>
+                    <td><input class="c1" type="text" name="" id="state" onkeyup="v9()"></td>
+                    <td id="i9"></td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td>
+                        <select name="" id="">
+                            <option value="">India</option>
+                            <option value="">USA</option>
+                            <option value="">canada</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Language known</th>
+                    <td>
+                        <input type="checkbox">Tamil
+                        <input type="checkbox" name="" id=""> English
+                        <input type="checkbox" name="" id="">Kannada
+                        <input type="checkbox" name="" id="">Hindi
+                        <input type="checkbox">Telugu
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="checkbox" name="" id=""> Hearby I declear all the given details are true
+                
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:right; ">login to <a href="https://ethnus.com/">Ethnus</a> website</td>
+                </tr>
+            </table>
+            <div class="b1">
+                <button type="submit">Register</button>
+            </div>
+    
+        </div>
+    </center>
+    
+    <script>
+       
+
+        function v1(){
+            var firstname=document.getElementById("firstname").value;
+            if(firstname.length<5){
+                document.getElementById("i1").innerHTML='poor'
+                document.getElementById("i1").style.color='red'
+            }
+            else{
+                document.getElementById("i1").innerHTML='good'
+                document.getElementById("i1").style.color='green'
+            }
+        }
+        function v2(){
+            var lastname=document.getElementById("lastname").value;
+            if(lastname.length<5){
+                document.getElementById("i2").innerHTML='poor'
+                document.getElementById("i2").style.color='red'
+            }
+            else{
+                document.getElementById("i2").innerHTML='good'
+                document.getElementById("i2").style.color='green'
+            }
+        }
+        function v3(){
+            var email=document.getElementById("email").value;
+            if(email.length<5){
+                document.getElementById("i3").innerHTML='poor'
+                document.getElementById("i3").style.color='red'
+            }
+            else{
+                document.getElementById("i3").innerHTML='good'
+                document.getElementById("i3").style.color='green'
+            }
+        }
+        function v4(){
+            var password=document.getElementById("password").value;
+            if(password.length<5){
+                document.getElementById("i4").innerHTML='poor'
+                document.getElementById("i4").style.color='red'
+            }
+            else{
+                document.getElementById("i4").innerHTML='good'
+                document.getElementById("i4").style.color='green'
+            }
+        }
+        function v5(){
+            var repassword=document.getElementById("repassword").value;
+            if(repassword.length<5){
+                document.getElementById("i5").innerHTML='poor or mismatched'
+                document.getElementById("i5").style.color='red'
+            }
+            else{
+                document.getElementById("i5").innerHTML='good'
+                document.getElementById("i5").style.color='green'
+            }
+        }
+        function v6(){
+            var age=document.getElementById("age").value;
+            if(age.length<2){
+                document.getElementById("i6").innerHTML='poor'
+                document.getElementById("i6").style.color='red'
+            }
+            else{
+                document.getElementById("i6").innerHTML='good'
+                document.getElementById("i6").style.color='green'
+            }
+        }
+        function v7(){
+            var phone=document.getElementById("phone").value;
+            if(phone.length<10){
+                document.getElementById("i7").innerHTML='poor'
+                document.getElementById("i7").style.color='red'
+            }
+            else{
+                document.getElementById("i7").innerHTML='good'
+                document.getElementById("i7").style.color='green'
+            }
+        }
+        function v8(){
+            var address=document.getElementById("address").value;
+            if(address.length<10){
+                document.getElementById("i8").innerHTML='poor'
+                document.getElementById("i8").style.color='red'
+            }
+            else{
+                document.getElementById("i8").innerHTML='good'
+                document.getElementById("i8").style.color='green'
+            }
+        }
+        function v9(){
+            var state=document.getElementById("state").value;
+            if(state.length<10){
+                document.getElementById("i9").innerHTML='poor'
+                document.getElementById("i9").style.color='red'
+            }
+            else{
+                document.getElementById("i9").innerHTML='good'
+                document.getElementById("i9").style.color='green'
+            }
+        }
+
+
+    </script>
+</body>
+</html>
